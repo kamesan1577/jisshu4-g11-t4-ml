@@ -18,7 +18,7 @@ elif len(sys.argv) == 3:
     elif sys.argv[1] == "test":
         finetuned_model = sys.argv[2]
         while True:
-            prompt = input("入力してください: ")
+            prompt = input("プロンプトを入力してください: ")
             if prompt == "exit":
                 break
             test.compare_response(finetuned_model,prompt)
