@@ -30,4 +30,4 @@ $ python3 main.py train {file_id.txtの中身を貼り付ける}
 $ python3 main.py test {メールに記載されているをモデル名を貼り付ける}
 ```
 
-放送禁止用語の検出には、[放送禁止用語リスト](http://monoroch.net/kinshi/)を使用しています
+放送禁止用語の検出には、有志の[放送禁止用語リスト](http://monoroch.net/kinshi/)を使用しています
