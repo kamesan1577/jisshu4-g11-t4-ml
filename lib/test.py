@@ -21,6 +21,6 @@ def compare_response(finetuned_model,prompt):
         ]
     )
 
-    print("finetuned: ", finetuned_completion["choices"][0]["text"])
-    print("original: ", original_completion["choices"][0]["text"])
+    print("finetuned: ", finetuned_completion["choices"][0]["message"]["content"])
+    print("original: ", original_completion["choices"][0]["message"]["content"])
 

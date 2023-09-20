@@ -1,7 +1,7 @@
 import os
 import sys
 import openai
-from lib import converter, trainer
+from lib import converter, trainer, test
 
 
 # コマンドライン引数で指定された場合のみ実行
@@ -17,8 +17,11 @@ elif len(sys.argv) == 3:
         trainer.fine_tune(sys.argv[2])
     elif sys.argv[1] == "test":
         finetuned_model = sys.argv[2]
-        prompt = input("入力してください: ")
-        trainer.compare_response(finetuned_model,prompt)
+        while True:
+            prompt = input("入力してください: ")
+            if prompt == "exit":
+                break
+            test.compare_response(finetuned_model,prompt)
     else:
         print("引数が不正です。")
 else:
