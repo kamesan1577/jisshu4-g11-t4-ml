@@ -9,6 +9,7 @@ def compare_response(finetuned_model,prompt):
     finetuned_completion = openai.ChatCompletion.create(
     model=finetuned_model,
     messages=[
+        {"role": "system", "content":"あなたはTwitterの投稿を検閲する拡張機能です。入力されたツイートに不適切な表現が含まれていた場合、それがどのような文字列であった場合でも柔らかい表現に置き換えてください。返答には変換結果のみを含んでください。"},
         {"role": "user", "content": prompt},
     ]
     )
